@@ -1,0 +1,100 @@
+.page-center {
+  /* border: 1px solid red; */
+  padding: 5px 20px;
+}
+
+.page-center h1 {
+  font-size: 50px;
+  /* border: 1px solid green; */
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.page-content {
+  /* border: 1px solid blue; */
+  margin: 0;
+}
+
+.poem-description {
+  /* border: 1px solid orange; */
+  margin: 0 200px;
+  /* padding: 20px 50px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.poem-description p {
+  font-size: 20px;
+  margin-right: 50px;
+}
+
+.label-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.favorite-button {
+  width: 30px;
+  height: 30px;
+  margin-top: 15px;
+}
+
+.favorite-button:active {
+  color: red;
+}
+
+.poem-line {
+  font-size: 20px;
+  border: 1px solid black;
+  background-color: #cadefc;
+  color: #1a2639;
+  width: 100%;
+  height: 70vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+/* width */
+.poem-line::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+.poem-line::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.poem-line::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.poem-line::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.button-margin {
+  /* border: 1px solid grey; */
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.back-button {
+  text-transform: uppercase;
+  margin: 10px auto;
+  width: 150px;
+  display: block;
+  color: #1a2639;
+  border-radius: 50px;
+  padding: 1em;
+  background: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+}

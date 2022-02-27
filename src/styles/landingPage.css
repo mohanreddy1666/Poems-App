@@ -1,0 +1,142 @@
+.landing-poems-heading {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: #1a2639;
+  flex-direction: column;
+}
+.landing-poems-heading h1 {
+  text-align: center;
+}
+
+.landingPage {
+  background-color: #1a2639;
+
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  /* padding: 5px; */
+  /* border: 1px solid red; */
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* text-align: center; */
+}
+
+.card {
+  /* border: 3px solid green; */
+  /* max-height: 100vh; */
+  /* max-width: 100%; */
+  /* margin: 15px; */
+  /* box-sizing: border-box; */
+
+  margin: 5px 0;
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card-content-description {
+  /* border: 3px solid blue; */
+  background-color: #d9dad7;
+  width: 300px;
+  height: 250px;
+  padding: 10px;
+  box-shadow: 2px 2px 15px rgb(197, 195, 195);
+  margin: 10px;
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content-description:hover {
+  background: linear-gradient(150deg, #5dacbd, #24527a 100%);
+  color: white;
+}
+
+.card-content {
+  margin: 15px;
+  text-align: center;
+  overflow: auto;
+}
+
+.card-content-description h5 {
+  font-size: 15px;
+}
+
+.card-values {
+  font-size: 18px;
+}
+
+.card-description {
+  /* border: 1px solid yellow; */
+  margin: 5px 0;
+}
+
+.view-more {
+  /* margin: 0; */
+  text-transform: uppercase;
+  margin: 10px auto;
+  width: 150px;
+  display: block;
+  color: #1a2639;
+  border-radius: 50px;
+  padding: 1em;
+  background: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.view-more:hover {
+  background-color: #93e4c1; /* Green */
+}
+
+.landing-page-back-button {
+  /* border: 1px solid grey; */
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #1a2639;
+}
+
+.landing-back-button:hover {
+  background-color: #93e4c1; /* Green */
+  color: #1a2639;
+}
+
+.landing-back-button {
+  text-transform: uppercase;
+  margin: 10px auto;
+  width: 150px;
+  display: block;
+  color: #1a2639;
+  border-radius: 50px;
+  padding: 1em;
+  background: white;
+  border: none;
+  font-weight: bold;
+}
+
+.hr-line {
+  width: 70%;
+}
+
+.sort-label {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.sort-element {
+  margin: 25px;
+  float: right;
+}
+.sort-element select {
+  width: 100px;
+  height: 40px;
+}

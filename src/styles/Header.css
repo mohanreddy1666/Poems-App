@@ -1,0 +1,58 @@
+.main {
+  margin: 0;
+  padding: 0;
+  max-height: 100%;
+  max-width: 100%;
+  background: url('../assets/poetry2.jpeg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+}
+.page-center {
+  background-color: #1a2639;
+  color: white;
+}
+.main-header {
+  margin: 0 auto;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.main-header h2 {
+  font-size: 100px;
+  font-weight: 600px;
+  color: white;
+}
+
+.button-poem {
+  margin: 0 auto;
+  padding: 150px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.fetch-poem-button {
+  /* padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 10px; */
+  text-transform: uppercase;
+  width: 150px;
+  display: block;
+  margin: 0 auto;
+  color: #000000;
+  border-radius: 50px;
+  padding: 1em;
+  background: white;
+  border: none;
+  font-weight: bold;
+  margin-top: 4em;
+  /* box-shadow: 2px 2px 15px rgb(197, 195, 195); */
+}
+
+.fetch-poem-button:hover {
+  cursor: pointer;
+  background: linear-gradient(150deg, #fa7cbb, #f14658 100%);
+  color: white;
+}
