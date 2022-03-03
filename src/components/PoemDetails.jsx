@@ -7,40 +7,36 @@ export default function DetailView({ data }) {
   const currentlyAFavorite = <FontAwesomeIcon icon={faHeart} />;
   const notCurrentlyAFavorite = <FontAwesomeIcon icon={faHeartBroken} />;
   const [fav, setFav] = useState(false);
-  const addFavorite = (author) => {
+  const addFavorite = (author, title) => {
     let event = [];
-    const storage = window.sessionStorage.getItem('fav');
+    const storage = window.localStorage.getItem('fav');
 
     if (storage) {
       event = JSON.parse(storage);
-      let index = event.indexOf(author);
+      let index = event.indexOf(title);
       console.log('index', index);
       if (index !== -1) {
         setFav(false);
         event.splice(index, 1);
-        window.sessionStorage.setItem('fav', JSON.stringify(event));
+        window.localStorage.setItem('fav', JSON.stringify(event));
       } else {
-        event.push(author);
+        event.push(title);
         setFav(true);
-        window.sessionStorage.setItem('fav', JSON.stringify(event));
+        window.localStorage.setItem('fav', JSON.stringify(event));
       }
     } else {
       setFav(true);
-      event.push(author);
-      window.sessionStorage.setItem('fav', JSON.stringify(event));
+      event.push(title);
+      window.localStorage.setItem('fav', JSON.stringify(event));
     }
   };
   let { poemAuthor, poemTitle } = useParams();
   const navigate = useNavigate();
-  console.log('code', poemAuthor, poemTitle);
-  const selectedAuthor = data.find((author) => {
-    console.log('loc', window.location.href);
+  const selectedAuthor = data.find((item) => {
     const splitArray = window.location.href.split('/');
-    const matchid = decodeURI(splitArray[4]);
-    return matchid === author.author;
+    const matchid = decodeURI(splitArray[6]);
+    return matchid === item.title;
   });
-
-  console.log('selected', selectedAuthor);
   const { author, lines, title, linecount } = selectedAuthor;
 
   return (
@@ -56,7 +52,7 @@ export default function DetailView({ data }) {
                   <p className='lable-text'>{linecount} lines</p>
                   <button
                     className='favorite-button'
-                    onClick={() => addFavorite(author)}
+                    onClick={() => addFavorite(author, title)}
                   >
                     {fav === true ? currentlyAFavorite : notCurrentlyAFavorite}
                   </button>
