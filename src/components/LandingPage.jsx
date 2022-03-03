@@ -33,41 +33,44 @@ export default function LandingPage({ data }) {
     <div className='landing-poems'>
       <div className='landing-poems-heading'>
         <h1>Poems</h1>
-        <div className='sort-component'>
-          <div className='sort-element'>
-            <label className='sort-label'>Sort</label>
-            <select onChange={(e) => setSortType(e.target.value)}>
-              <option value='title'>Title</option>
-              <option value='author'>Author</option>
-            </select>
+        <div className='fav-sort'>
+          <div className='favList'>
+            <h2> Favourites</h2>
+            <div className='fav-list-poems'>
+              {store
+                ? storage.map((link, i) => {
+                    searchTitle(link);
+                    return (
+                      <li
+                        className='fav-link'
+                        key={i}
+                        onClick={() =>
+                          navigate(
+                            `/author/${searchTitle(link).author}/title/${
+                              searchTitle(link).title
+                            }`
+                          )
+                        }
+                      >
+                        {link}
+                      </li>
+                    );
+                  })
+                : 'No favourites'}
+            </div>
+          </div>
+          <div className='sort-component'>
+            <div className='sort-element'>
+              <label className='sort-label'>Sort</label>
+              <select onChange={(e) => setSortType(e.target.value)}>
+                <option value='title'>Title</option>
+                <option value='author'>Author</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
       <div className='fav-and-poems'>
-        <div className='favList'>
-          <h1> Favourites</h1>
-
-          {store
-            ? storage.map((link, i) => {
-                searchTitle(link);
-                return (
-                  <li
-                    className='fav-link'
-                    key={i}
-                    onClick={() =>
-                      navigate(
-                        `/author/${searchTitle(link).author}/title/${
-                          searchTitle(link).title
-                        }`
-                      )
-                    }
-                  >
-                    {link}
-                  </li>
-                );
-              })
-            : 'No favourites'}
-        </div>
         <div className='landingPage'>
           {details.map((link, i) => {
             return (

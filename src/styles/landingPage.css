@@ -14,17 +14,72 @@
   background-color: #1a2639;
 }
 
+.fav-sort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.favList {
+  font-size: medium;
+  background-color: #1a2639;
+  color: #ffffff;
+  padding: 10px;
+  width: 300px;
+  height: 30vh;
+  margin-left: 25px;
+  border-radius: 2%;
+}
+
+.favList h2 {
+  font-size: 22px;
+  font-weight: normal;
+  text-align: center;
+  margin: 4px 0;
+}
+
+.fav-list-poems {
+  font-size: medium;
+  padding: 0 2px;
+  border: 1px solid black;
+  border-radius: 2%;
+  background-color: #d9dad7;
+  color: #1a2639;
+  width: 100%;
+  height: 25vh;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* justify-content: center; */
+}
+/* width */
+.fav-list-poems::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.fav-list-poems::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.fav-list-poems::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.fav-list-poems::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .fav-and-poems {
   display: flex;
   color: white;
   margin: 15px;
 }
-.favList {
-  background-color: #d9dad7;
-  color: #1a2639;
-  padding: 10px;
-  height: 50%;
-}
+
 .fav-link {
   text-decoration: none;
   color: #1a2639;
